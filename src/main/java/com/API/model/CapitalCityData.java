@@ -8,10 +8,10 @@ public class CapitalCityData {
 
     public CapitalCityData() {
         citydata = new HashMap<>();
-        createCityData();
+        generateCityData();
     }
 
-    private void createCityData() {
+    private void generateCityData() {
         latAndLong("stockholm", "59.329323", "18.068581");
         latAndLong("oslo","59.913868", "10.752245");
     }
