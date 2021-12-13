@@ -9,7 +9,6 @@ public class CapitalCityData {
     public CapitalCityData() {
         citydata = new HashMap<>();
         createCityData();
-
     }
 
     private void createCityData() {
@@ -18,7 +17,7 @@ public class CapitalCityData {
     }
 
     private void latAndLong(String city, String latitude, String longitude) {
-        citydata.put(city, "lat="+latitude+"&lon="+longitude);
+        citydata.put(city, "lat=" + latitude + "&lon=" + longitude);
     }
 
     public String getCityData(String destination) {

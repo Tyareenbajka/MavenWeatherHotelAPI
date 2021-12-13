@@ -13,8 +13,9 @@ public class WeatherAPI {
     Weather weather;
 
     public Weather callWeatherAPI(String destination) {
-        String apiKey = "&units=metric&appid=7e8cb3086564753cb1c05a9a0477a2a8";
-        String url = "https://api.openweathermap.org/data/2.5/onecall?" + destination + apiKey;
+        String units = "&units=metric&";
+        String apiKey = "appid=7e8cb3086564753cb1c05a9a0477a2a8";
+        String url = "https://api.openweathermap.org/data/2.5/onecall?" + destination + units + apiKey;
 
         try{
             ObjectMapper objectMapper = new ObjectMapper();
@@ -27,8 +28,6 @@ public class WeatherAPI {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
         return weather;
     }
 }

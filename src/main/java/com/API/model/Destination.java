@@ -6,7 +6,6 @@ public class Destination {
     DataCalculator calculator;
     WeatherAPI weatherAPI;
 
-
     public Destination() {
         this.citydata = new CapitalCityData();
         this.calculator = new DataCalculator();

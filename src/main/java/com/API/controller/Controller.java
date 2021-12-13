@@ -11,7 +11,6 @@ public class Controller {
     }
 
     public String getTemperature(String destination) {
-        String weatherData = request.getWeatherInfo(destination);
-        return weatherData;
+        return request.getWeatherInfo(destination);
     }
 }
