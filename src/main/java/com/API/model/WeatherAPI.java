@@ -13,10 +13,12 @@ public class WeatherAPI {
     Weather weather;
 
     public Weather callWeatherAPI(String destination) {
+        String apiKey = "&units=metric&appid=7e8cb3086564753cb1c05a9a0477a2a8";
+        String url = "https://api.openweathermap.org/data/2.5/onecall?" + destination + apiKey;
 
         try{
             ObjectMapper objectMapper = new ObjectMapper();
-            URL apiSite = new URL("https://api.openweathermap.org/data/2.5/onecall?lat=59.3294&lon=18.0686&units=metric&appid=7e8cb3086564753cb1c05a9a0477a2a8");
+            URL apiSite = new URL(url);
             URLConnection apiConnection = apiSite.openConnection();
             BufferedReader readData = new BufferedReader(new InputStreamReader(apiConnection.getInputStream()));
 

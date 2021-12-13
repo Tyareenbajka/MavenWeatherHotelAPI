@@ -2,17 +2,20 @@ package com.API.model;
 
 public class Destination {
 
+    CapitalCityData citydata;
     DataCalculator calculator;
     WeatherAPI weatherAPI;
     Weather weather;
 
     public Destination() {
+        this.citydata = new CapitalCityData();
         this.calculator = new DataCalculator();
         this.weatherAPI = new WeatherAPI();
     }
 
     public String getWeatherInfo(String destination) {
-        this.weather = weatherAPI.callWeatherAPI(destination);
+        String citydata = this.citydata.getCityData(destination);
+        this.weather = weatherAPI.callWeatherAPI(citydata);
         double data = this.calculator.calculateAverageTemperature(weather);
         return String.format("%.1f", data);
     }

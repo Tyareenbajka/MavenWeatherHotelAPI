@@ -4,14 +4,14 @@ import com.API.model.RequestHandler;
 
 public class Controller {
 
-
     RequestHandler request;
+
     public Controller() {
         this.request = new RequestHandler();
     }
 
-    public String getTemperature() {
-        String weatherData = request.getWeatherInfo();
+    public String getTemperature(String destination) {
+        String weatherData = request.getWeatherInfo(destination);
         return weatherData;
     }
 }

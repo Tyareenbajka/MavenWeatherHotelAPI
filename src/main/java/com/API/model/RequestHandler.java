@@ -8,8 +8,7 @@ public class RequestHandler {
         this.destination = new Destination();
     }
 
-    public String getWeatherInfo() {
-        String destinationInfo = destination.getWeatherInfo("Stockholm");
-        return destinationInfo;
+    public String getWeatherInfo(String destination) {
+        return this.destination.getWeatherInfo(destination);
     }
 }

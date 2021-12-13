@@ -14,10 +14,10 @@ public class View {
 
     public void start() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Press a key to get a destination along with the average temperature for the next seven days.");
-        scan.nextLine();
+        System.out.println("Enter a city to get the average temperature for the next seven days.");
+        String city = scan.nextLine();
 
-        String information = controller.getTemperature();
-        System.out.println("Average temperature for Stockholm: " + information + "\u2103");
+        String information = controller.getTemperature(city);
+        System.out.println("Average temperature for " + city + ": "+ information + "\u2103");
     }
 }
