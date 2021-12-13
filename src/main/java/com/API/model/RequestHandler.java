@@ -2,7 +2,7 @@ package com.API.model;
 
 public class RequestHandler {
 
-    Destination destination;
+    private final Destination destination;
 
     public RequestHandler() {
         this.destination = new Destination();

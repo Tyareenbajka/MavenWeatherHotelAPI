@@ -7,7 +7,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Daily {
 
-    Temp temp;
+    private Temp temp;
 
     public Daily() {
     }

@@ -4,7 +4,7 @@ import com.API.model.RequestHandler;
 
 public class Controller {
 
-    RequestHandler request;
+    private final RequestHandler request;
 
     public Controller() {
         this.request = new RequestHandler();

@@ -20,7 +20,7 @@ public class CapitalCityData {
         citydata.put(city, "lat=" + latitude + "&lon=" + longitude);
     }
 
-    public String getCityData(String destination) {
+    protected String getCityData(String destination) {
         return citydata.get(destination);
     }
 }

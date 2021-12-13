@@ -10,9 +10,9 @@ import java.net.URLConnection;
 
 public class WeatherAPI {
 
-    Weather weather;
+    private Weather weather;
 
-    public Weather callWeatherAPI(String destination) {
+    protected Weather callWeatherAPI(String destination) {
         String units = "&units=metric&";
         String apiKey = "appid=7e8cb3086564753cb1c05a9a0477a2a8";
         String url = "https://api.openweathermap.org/data/2.5/onecall?" + destination + units + apiKey;
