@@ -1,6 +1,6 @@
 package com.API.controller;
 
-import com.API.model.RequestHandler;
+import com.API.model.Handler.RequestHandler;
 
 public class Controller {
 
@@ -12,5 +12,9 @@ public class Controller {
 
     public String getTemperature(String destination) {
         return request.getWeatherInfo(destination);
+    }
+
+    public String getHotels(String city){
+        return request.getHotelsInfo(city);
     }
 }
