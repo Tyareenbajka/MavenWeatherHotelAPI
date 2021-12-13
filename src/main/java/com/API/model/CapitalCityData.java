@@ -7,7 +7,7 @@ public class CapitalCityData {
     HashMap<String,String> citydata;
 
     public CapitalCityData() {
-        citydata = new HashMap<String,String>();
+        citydata = new HashMap<>();
         createCityData();
 
     }
