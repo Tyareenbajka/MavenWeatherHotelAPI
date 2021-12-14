@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MavenWeatherHotelAPI.iml" filepath="$PROJECT_DIR$/MavenWeatherHotelAPI.iml" />
       <module fileurl="file://$PROJECT_DIR$/MavenWeatherHotel.iml" filepath="$PROJECT_DIR$/MavenWeatherHotel.iml" />
     </modules>
   </component>
