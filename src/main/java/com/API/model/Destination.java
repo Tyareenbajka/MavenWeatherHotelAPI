@@ -14,7 +14,7 @@ public class Destination {
 
     public String getWeatherInfo(String destination) {
         String citydata = this.citydata.getCityData(destination);
-        Weather weather = weatherAPI.callWeatherAPI(citydata);
+        Weather weather = weatherAPI.getApiData(citydata);
         double data = this.calculator.calculateAverageTemperature(weather);
         return String.format("%.1f", data);
     }

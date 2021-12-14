@@ -19,7 +19,7 @@ public class RequestHandler {
 
     public String getHotelsInfo(String city) {
         try {
-            return cityID.hotelFinder(city);
+            return cityID.getApiData(city);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }

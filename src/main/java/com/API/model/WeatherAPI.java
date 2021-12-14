@@ -8,11 +8,12 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class WeatherAPI {
+public class WeatherAPI implements apiCaller<Weather>{
 
     private Weather weather;
 
-    protected Weather callWeatherAPI(String destination) {
+    @Override
+    public Weather getApiData(String destination) {
         String units = "&units=metric&";
         String apiKey = "appid=7e8cb3086564753cb1c05a9a0477a2a8";
         String url = "https://api.openweathermap.org/data/2.5/onecall?" + destination + units + apiKey;

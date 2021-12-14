@@ -3,6 +3,7 @@ package com.API.model.Handler;
 import com.API.model.Hotel.CityIDPOJO.City;
 import com.API.model.Hotel.HotelsPOJO.Hotels;
 import com.API.model.Hotel.HotelsPOJO.Results;
+import com.API.model.apiCaller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -11,12 +12,13 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class HotelFinder {
+public class HotelFinder implements apiCaller<String> {
 
-    public String hotelFinder(String city) throws IOException, InterruptedException {
+    @Override
+    public String getApiData(String destination) throws IOException, InterruptedException {
         ObjectMapper objectMapper = new ObjectMapper();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://hotels4.p.rapidapi.com/locations/v2/search?query=" + city))
+                .uri(URI.create("https://hotels4.p.rapidapi.com/locations/v2/search?query=" + destination))
                 .header("x-rapidapi-host", "hotels4.p.rapidapi.com")
                 .header("x-rapidapi-key", "04be855e8fmsh2bf8f6d108d6f4ep13597ajsndd6e172f9b02")
                 .method("GET", HttpRequest.BodyPublishers.noBody())
