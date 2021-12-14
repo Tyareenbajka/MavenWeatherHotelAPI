@@ -19,5 +19,8 @@ public class View {
 
         String information = controller.getTemperature(city);
         System.out.println("Average temperature for " + city + ": "+ information + "\u2103");
+
+        String hotelsInfo = controller.getHotels(city);
+        System.out.println(hotelsInfo);
     }
 }
