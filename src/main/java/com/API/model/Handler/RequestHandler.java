@@ -18,11 +18,6 @@ public class RequestHandler {
     }
 
     public String getHotelsInfo(String city) {
-        try {
-            return cityID.getApiData(city);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
-        }
-        return "!";
+        return cityID.getApiData(city);
     }
 }
