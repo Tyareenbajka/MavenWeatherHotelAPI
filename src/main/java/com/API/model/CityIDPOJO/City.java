@@ -1,4 +1,4 @@
-package com.API.model.Hotel.CityIDPOJO;
+package com.API.model.CityIDPOJO;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

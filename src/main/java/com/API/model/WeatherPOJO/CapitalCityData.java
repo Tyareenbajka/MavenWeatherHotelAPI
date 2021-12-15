@@ -1,4 +1,4 @@
-package com.API.model;
+package com.API.model.WeatherPOJO;
 
 import java.util.HashMap;
 
@@ -20,7 +20,7 @@ public class CapitalCityData {
         citydata.put(city, "lat=" + latitude + "&lon=" + longitude);
     }
 
-    protected String getCityData(String destination) {
+    public String getCityData(String destination) {
         return citydata.get(destination);
     }
 }

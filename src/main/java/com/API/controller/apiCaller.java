@@ -1,4 +1,4 @@
-package com.API.model;
+package com.API.controller;
 
 import java.io.IOException;
 

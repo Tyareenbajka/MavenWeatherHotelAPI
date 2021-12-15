@@ -1,5 +1,6 @@
-package com.API.model;
+package com.API.controller;
 
+import com.API.model.WeatherPOJO.Weather;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.BufferedReader;
@@ -8,9 +9,13 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class WeatherAPI implements apiCaller<Weather>{
+public class WeatherAPI implements apiCaller<Weather> {
 
     private Weather weather;
+    private static WeatherAPI instance;
+
+    private WeatherAPI() {
+    }
 
     @Override
     public Weather getApiData(String destination) {
@@ -30,5 +35,12 @@ public class WeatherAPI implements apiCaller<Weather>{
             e.printStackTrace();
         }
         return weather;
+    }
+
+    public static WeatherAPI getInstance() {
+        if (instance == null) {
+            instance = new WeatherAPI();
+        }
+        return instance;
     }
 }

@@ -1,7 +1,6 @@
-package com.API.model.Handler;
-import com.API.model.Destination;
-
-import java.io.IOException;
+package com.API.controller;
+import com.API.controller.Destination;
+import com.API.controller.HotelFinder;
 
 public class RequestHandler {
 
@@ -10,7 +9,7 @@ public class RequestHandler {
 
     public RequestHandler() {
         this.destination = new Destination();
-        this.cityID = new HotelFinder();
+        this.cityID = HotelFinder.getInstance();
     }
 
     public String getWeatherInfo(String destination) {

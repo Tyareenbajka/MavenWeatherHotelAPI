@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="MavenWeatherHotel" />
         <module name="MavenWeatherHotelAPI" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="MavenWeatherHotel" target="16" />
       <module name="MavenWeatherHotelAPI" target="16" />
     </bytecodeTargetLevel>
   </component>

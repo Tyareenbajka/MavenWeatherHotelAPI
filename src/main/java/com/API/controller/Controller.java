@@ -1,7 +1,5 @@
 package com.API.controller;
 
-import com.API.model.Handler.RequestHandler;
-
 public class Controller {
 
     private final RequestHandler request;

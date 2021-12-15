@@ -1,11 +1,8 @@
-package com.API.model.Handler;
+package com.API.controller;
 
-import com.API.model.Hotel.CityIDPOJO.City;
-import com.API.model.Hotel.HotelsPOJO.Hotels;
-import com.API.model.Hotel.HotelsPOJO.Results;
-import com.API.model.apiCaller;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
+import com.API.model.CityIDPOJO.City;
+import com.API.model.HotelsPOJO.Hotels;
+import com.API.model.HotelsPOJO.Results;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -15,6 +12,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class HotelFinder implements apiCaller<String> {
+    private static HotelFinder instance;
 
     @Override
     public String getApiData(String destination) {
@@ -49,5 +47,12 @@ public class HotelFinder implements apiCaller<String> {
             e.printStackTrace();
         }
         return listOfHotels.toString();
+    }
+
+    public static HotelFinder getInstance() {
+        if (instance == null) {
+            instance = new HotelFinder();
+        }
+        return instance;
     }
 }

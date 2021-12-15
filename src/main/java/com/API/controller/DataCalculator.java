@@ -1,8 +1,12 @@
-package com.API.model;
+package com.API.controller;
+
+import com.API.model.WeatherPOJO.Daily;
+import com.API.model.WeatherPOJO.Temp;
+import com.API.model.WeatherPOJO.Weather;
 
 public class DataCalculator {
 
-    protected double calculateAverageTemperature(Weather weather){
+    public double calculateAverageTemperature(Weather weather){
         double tempSum = 0;
         for(Daily day : weather.getDaily()){
             Temp temp = day.getTemp();

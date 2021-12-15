@@ -1,4 +1,4 @@
-package com.API.model.Hotel.HotelsPOJO;
+package com.API.model.HotelsPOJO;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

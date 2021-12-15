@@ -1,4 +1,7 @@
-package com.API.model;
+package com.API.controller;
+
+import com.API.model.WeatherPOJO.CapitalCityData;
+import com.API.model.WeatherPOJO.Weather;
 
 public class Destination {
 
@@ -9,7 +12,7 @@ public class Destination {
     public Destination() {
         this.citydata = new CapitalCityData();
         this.calculator = new DataCalculator();
-        this.weatherAPI = new WeatherAPI();
+        this.weatherAPI = WeatherAPI.getInstance();
     }
 
     public String getWeatherInfo(String destination) {
@@ -18,4 +21,6 @@ public class Destination {
         double data = this.calculator.calculateAverageTemperature(weather);
         return String.format("%.1f", data);
     }
+
+
 }
