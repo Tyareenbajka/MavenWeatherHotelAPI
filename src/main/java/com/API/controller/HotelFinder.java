@@ -14,6 +14,9 @@ import java.net.http.HttpResponse;
 public class HotelFinder implements apiCaller<String> {
     private static HotelFinder instance;
 
+    private HotelFinder() {
+    }
+
     @Override
     public String getApiData(String destination) {
         StringBuilder listOfHotels = new StringBuilder();
