@@ -36,7 +36,7 @@ public class HotelFinder implements apiCaller<String> {
             request = HttpRequest.newBuilder()
                     .uri(URI.create("https://hotels4.p.rapidapi.com/properties/list?destinationId=" + cityID + "&pageNumber=1&pageSize=25&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&sortOrder=PRICE&locale=en_US&currency=USD"))
                     .header("x-rapidapi-host", "hotels4.p.rapidapi.com")
-                    .header("x-rapidapi-key", "04be855e8fmsh2bf8f6d108d6f4ep13597ajsndd6e172f9b02")
+                    .header("x-rapidapi-key", "{API-key}")
                     .method("GET", HttpRequest.BodyPublishers.noBody())
                     .build();
             response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
